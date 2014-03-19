@@ -3,7 +3,42 @@
 <title>Add New Program</title>
 <meta content="PhysTrack" name="description">
 <style>.file-input-wrapper { overflow: hidden; position: relative; cursor: pointer; z-index: 1; }.file-input-wrapper input[type=file], .file-input-wrapper input[type=file]:focus, .file-input-wrapper input[type=file]:hover { position: absolute; top: 0; left: 0; cursor: pointer; opacity: 0; filter: alpha(opacity=0); z-index: 99; outline: 0; }.file-input-name { margin-left: 8px; }</style><link data-turbolinks-track="true" href="http://tranquil-bayou-7824.herokuapp.com/assets/application-43cd6e298c1b5c851a9047a2a7724e8a.css" media="all" rel="stylesheet">
-<script data-turbolinks-track="true" src="http://tranquil-bayou-7824.herokuapp.com/assets/application-34cd2e1b6a9f97a4a5d95668ff247fe2.js"></script><style type="text/css"></style>
+<script data-turbolinks-track="true" src="http://tranquil-bayou-7824.herokuapp.com/assets/application-34cd2e1b6a9f97a4a5d95668ff247fe2.js"></script><style type="text/css">
+.collapse.in {
+  display: table-row;
+}
+.modal-body {
+  padding: 0;
+}
+.modal-content {
+  padding: 0 15px;
+}
+.modal-body table {
+  font-size: 14px;
+}
+.table>thead>tr>th, .table>thead>tr>td, .table>tbody>tr>th, .table>tbody>tr>td, .table>tfoot>tr>th, .table>tfoot>tr>td {
+  vertical-align: middle;
+}
+#exercises-content thead {
+  background: #eaeaea;
+}
+.modal-dialog {
+  width: 800px;
+}
+.collapse-images {
+  margin-bottom: 10px;
+}
+td:last-child [type=button] {
+  white-space: nowrap;
+  cursor: pointer;
+}
+tr.collapsing td p,
+tr.collapse td p {
+  color: #666;
+  font-size: 12px;
+  line-height: 16px;
+}
+</style>
 <meta content="authenticity_token" name="csrf-param">
 <meta content="n6Ra8395hpDEHa7SwWTErWzKLLO31RhxH7EU6V+HN1M=" name="csrf-token">
 <!--[if lt IE 9]>
@@ -147,7 +182,7 @@ Exercises
 <div class="modal-content">
 <div class="modal-header">
 <button aria-hidden="true" class="close" data-dismiss="modal" type="button">×</button>
-<h2>Add an Exercise</h2>
+<h2 style="margin:5px 10px;">Add an Exercise</h2>
 </div>
 <div class="modal-body">
 <div class="content" style="max-height: 300px; overflow-y: scroll;">
@@ -170,12 +205,12 @@ Type
 Equipment
 </td>
 <td>
-<a href="#">Expand all</a>
+<a href="#" type="button">Expand all</a>
 </td>
 </tr>
 </thead>
 <tbody><tr>
-  <th><input type="checkbox" value="3"></th>
+  <td><input type="checkbox" value="3"></td>
   <td>Sidelying shoulder external rotation</td><td>Shoulder &amp; Scapula</td><td>Strength &amp; Activation</td>
   <td>Dumbbell</td>
   <td>
@@ -185,22 +220,20 @@ Equipment
   </a></td>
   </tr><tr class="collapse out" id="collapseme3">
     <td>
-    <div class="col-xs-8">
-        </div></td><td colspan="2">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_extneral_rotation_in_the_scapular_plane_1.jpg" class="float:left">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_extneral_rotation_in_the_scapular_plane_2.jpg" class="float:left">
-        </td>
-
-    <td colspan="3">
-           Reps  Sets   Rest
-          <br>&lt;b&gt;Start position:&lt;/b&gt; Side-lying with your elbow bent to 90�� and resting on a rolled towel placed
+    </td><td colspan="5">
+            <div class="collapse-images">
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_extneral_rotation_in_the_scapular_plane_1.jpg">
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_extneral_rotation_in_the_scapular_plane_2.jpg">
+            </div>
+           <p>Reps  Sets   Rest
+          <br>&lt;b&gt;Start position:&lt;/b&gt; Side-lying with your elbow bent to 90�� and resting on a rolled towel placed</p>
         </td>
 
 
   </tr>
 
 <tr>
-  <th><input type="checkbox" value="4"></th>
+  <td><input type="checkbox" value="4"></td>
   <td>Standing external rotation in the scapular plane</td><td>Shoulder &amp; Scapula</td><td>Strength &amp; Activation</td>
   <td>Dumbbell</td>
   <td>
@@ -212,8 +245,8 @@ Equipment
     <td>
     <div class="col-xs-8">
         </div></td><td colspan="2">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_extneral_rotation_in_the_scapular_plane_1.jpg" class="float:left">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_extneral_rotation_in_the_scapular_plane_2.jpg" class="float:left">
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_extneral_rotation_in_the_scapular_plane_1.jpg" >
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_extneral_rotation_in_the_scapular_plane_2.jpg" >
         </td>
 
     <td colspan="3">
@@ -225,7 +258,7 @@ Equipment
   </tr>
 
 <tr>
-  <th><input type="checkbox" value="5"></th>
+  <td><input type="checkbox" value="5"></td>
   <td>Full can exercise</td><td>Shoulder &amp; Scapula</td><td>Strength &amp; Activation</td>
   <td>Dumbbell</td>
   <td>
@@ -237,8 +270,8 @@ Equipment
     <td>
     <div class="col-xs-8">
         </div></td><td colspan="2">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Full_can_exercise_1.jpg" class="float:left">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Full_can_exercise_2.jpg" class="float:left">
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Full_can_exercise_1.jpg" >
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Full_can_exercise_2.jpg" >
         </td>
 
     <td colspan="3">
@@ -252,7 +285,7 @@ Equipment
   </tr>
 
 <tr>
-  <th><input type="checkbox" value="6"></th>
+  <td><input type="checkbox" value="6"></td>
   <td>Low row</td><td>Shoulder &amp; Scapula</td><td>Strength &amp; Activation</td>
   <td>Elastic tubing</td>
   <td>
@@ -264,8 +297,8 @@ Equipment
     <td>
     <div class="col-xs-8">
         </div></td><td colspan="2">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Low_row_1.jpg" class="float:left">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Low_row_2.jpg" class="float:left">
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Low_row_1.jpg" >
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Low_row_2.jpg" >
         </td>
 
     <td colspan="3">
@@ -278,7 +311,7 @@ Equipment
   </tr>
 
 <tr>
-  <th><input type="checkbox" value="7"></th>
+  <td><input type="checkbox" value="7"></td>
   <td>Isometric low row</td><td>Shoulder &amp; Scapula</td><td>Strength (isometric)</td>
   <td></td>
   <td>
@@ -290,8 +323,8 @@ Equipment
     <td>
     <div class="col-xs-8">
         </div></td><td colspan="2">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Isometric_low_row_1.jpg" class="float:left">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Isometric_low_row_2.jpg" class="float:left">
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Isometric_low_row_1.jpg" >
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Isometric_low_row_2.jpg" >
         </td>
 
     <td colspan="3">
@@ -303,7 +336,7 @@ Equipment
   </tr>
 
 <tr>
-  <th><input type="checkbox" value="8"></th>
+  <td><input type="checkbox" value="8"></td>
   <td>Lawnmower</td><td>Shoulder &amp; Scapula</td><td>Strength &amp; Activation</td>
   <td></td>
   <td>
@@ -315,8 +348,8 @@ Equipment
     <td>
     <div class="col-xs-8">
         </div></td><td colspan="2">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Lawnmower_1.jpg" class="float:left">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Lawnmower_2.jpg" class="float:left">
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Lawnmower_1.jpg" >
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Lawnmower_2.jpg" >
         </td>
 
     <td colspan="3">
@@ -329,7 +362,7 @@ Equipment
   </tr>
 
 <tr>
-  <th><input type="checkbox" value="10"></th>
+  <td><input type="checkbox" value="10"></td>
   <td>Standing shoulder external rotation with towel roll</td><td>Shoulder &amp; Scapula</td><td>Strength &amp; Activation</td>
   <td>Elastic tubing</td>
   <td>
@@ -341,8 +374,8 @@ Equipment
     <td>
     <div class="col-xs-8">
         </div></td><td colspan="2">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_shoulder_external_rotation_with_towel_roll_1.jpg" class="float:left">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_shoulder_external_rotation_with_towel_roll_2.jpg" class="float:left">
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_shoulder_external_rotation_with_towel_roll_1.jpg" >
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_shoulder_external_rotation_with_towel_roll_2.jpg" >
         </td>
 
     <td colspan="3">
@@ -354,7 +387,7 @@ Equipment
   </tr>
 
 <tr>
-  <th><input type="checkbox" value="11"></th>
+  <td><input type="checkbox" value="11"></td>
   <td>Standing shoulder external rotation in 45 degrees</td><td>Shoulder &amp; Scapula</td><td>Strength &amp; Activation</td>
   <td>Elastic tubing</td>
   <td>
@@ -366,8 +399,8 @@ Equipment
     <td>
     <div class="col-xs-8">
         </div></td><td colspan="2">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_shoulder_external_rotation_in_45_degrees_1.jpg" class="float:left">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_shoulder_external_rotation_in_45_degrees_2.jpg" class="float:left">
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_shoulder_external_rotation_in_45_degrees_1.jpg" >
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_shoulder_external_rotation_in_45_degrees_2.jpg" >
         </td>
 
     <td colspan="3">
@@ -379,7 +412,7 @@ Equipment
   </tr>
 
 <tr>
-  <th><input type="checkbox" value="12"></th>
+  <td><input type="checkbox" value="12"></td>
   <td>Standing shoulder external rotation in 90 degrees</td><td>Shoulder &amp; Scapula</td><td>Strength &amp; Activation</td>
   <td>Elastic tubing</td>
   <td>
@@ -391,8 +424,8 @@ Equipment
     <td>
     <div class="col-xs-8">
         </div></td><td colspan="2">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_shoulder_external_rotation_in_90_degrees_1.jpg" class="float:left">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_shoulder_external_rotation_in_90_degrees_2.jpg" class="float:left">
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_shoulder_external_rotation_in_90_degrees_1.jpg" >
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_shoulder_external_rotation_in_90_degrees_2.jpg" >
         </td>
 
     <td colspan="3">
@@ -404,7 +437,7 @@ Equipment
   </tr>
 
 <tr>
-  <th><input type="checkbox" value="13"></th>
+  <td><input type="checkbox" value="13"></td>
   <td>Standing shoulder internal rotation</td><td>Shoulder &amp; Scapula</td><td>Strength &amp; Activation</td>
   <td>Elastic tubing</td>
   <td>
@@ -416,8 +449,8 @@ Equipment
     <td>
     <div class="col-xs-8">
         </div></td><td colspan="2">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_shoulder_internal_rotation_1.jpg" class="float:left">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_shoulder_internal_rotation_1.jpg" class="float:left">
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_shoulder_internal_rotation_1.jpg" >
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_shoulder_internal_rotation_1.jpg" >
         </td>
 
     <td colspan="3">
@@ -429,7 +462,7 @@ Equipment
   </tr>
 
 <tr>
-  <th><input type="checkbox" value="14"></th>
+  <td><input type="checkbox" value="14"></td>
   <td>Standing shoulder internal rotation in 90 degrees</td><td>Shoulder &amp; Scapula</td><td>Strength &amp; Activation</td>
   <td>Elastic tubing</td>
   <td>
@@ -441,8 +474,8 @@ Equipment
     <td>
     <div class="col-xs-8">
         </div></td><td colspan="2">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_shoulder_internal_rotation_in_90_degrees_1.jpg" class="float:left">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_shoulder_internal_rotation_in_90_degrees_2.jpg" class="float:left">
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_shoulder_internal_rotation_in_90_degrees_1.jpg" >
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Standing_shoulder_internal_rotation_in_90_degrees_2.jpg" >
         </td>
 
     <td colspan="3">
@@ -454,7 +487,7 @@ Equipment
   </tr>
 
 <tr>
-  <th><input type="checkbox" value="15"></th>
+  <td><input type="checkbox" value="15"></td>
   <td>Diagonal subscapularis</td><td>Shoulder &amp; Scapula</td><td>Strength &amp; Activation</td>
   <td>Elastic tubing</td>
   <td>
@@ -466,9 +499,9 @@ Equipment
     <td>
     <div class="col-xs-8">
         </div></td><td colspan="2">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Diagonal_subscapularis_1.jpg" class="float:left">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Diagonal_subscapularis_2.jpg" class="float:left">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Diagonal_subscapularis_3.jpg" class="float:left">
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Diagonal_subscapularis_1.jpg" >
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Diagonal_subscapularis_2.jpg" >
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Diagonal_subscapularis_3.jpg" >
         </td>
 
     <td colspan="3">
@@ -480,7 +513,7 @@ Equipment
   </tr>
 
 <tr>
-  <th><input type="checkbox" value="16"></th>
+  <td><input type="checkbox" value="16"></td>
   <td>Prone scap sets</td><td>Shoulder &amp; Scapula</td><td>Strength &amp; Activation</td>
   <td></td>
   <td>
@@ -492,8 +525,8 @@ Equipment
     <td>
     <div class="col-xs-8">
         </div></td><td colspan="2">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Prone_scap_sets_1.jpg" class="float:left">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Prone_scap_sets_2.jpg" class="float:left">
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Prone_scap_sets_1.jpg" >
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Prone_scap_sets_2.jpg" >
         </td>
 
     <td colspan="3">
@@ -506,7 +539,7 @@ Equipment
   </tr>
 
 <tr>
-  <th><input type="checkbox" value="17"></th>
+  <td><input type="checkbox" value="17"></td>
   <td>Prone scap sets with 45 degrees abduction</td><td>Shoulder &amp; Scapula</td><td>Strength &amp; Activation</td>
   <td>Dumbbell</td>
   <td>
@@ -518,9 +551,9 @@ Equipment
     <td>
     <div class="col-xs-8">
         </div></td><td colspan="2">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Prone_scap_sets_with_45_degrees_abduction_1.jpg" class="float:left">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Prone_scap_sets_with_45_degrees_abduction_2.jpg" class="float:left">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Prone_scap_sets_with_45_degrees_abduction_3.jpg" class="float:left">
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Prone_scap_sets_with_45_degrees_abduction_1.jpg" >
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Prone_scap_sets_with_45_degrees_abduction_2.jpg" >
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Prone_scap_sets_with_45_degrees_abduction_3.jpg" >
         </td>
 
     <td colspan="3">
@@ -533,7 +566,7 @@ Equipment
   </tr>
 
 <tr>
-  <th><input type="checkbox" value="18"></th>
+  <td><input type="checkbox" value="18"></td>
   <td>Prone scap sets with 90 degrees abduction</td><td>Shoulder &amp; Scapula</td><td>Strength &amp; Activation</td>
   <td>Dumbbell</td>
   <td>
@@ -545,10 +578,10 @@ Equipment
     <td>
     <div class="col-xs-8">
         </div></td><td colspan="2">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Prone_scap_sets_with_90_degrees_abduction_1.jpg" class="float:left">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Prone_scap_sets_with_90_degrees_abduction_2.jpg" class="float:left">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Prone_scap_sets_with_90_degrees_abduction_3.jpg" class="float:left">
-              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Prone_scap_sets_with_90_degrees_abduction_4.jpg" class="float:left">
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Prone_scap_sets_with_90_degrees_abduction_1.jpg" >
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Prone_scap_sets_with_90_degrees_abduction_2.jpg" >
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Prone_scap_sets_with_90_degrees_abduction_3.jpg" >
+              <img src="https://phystrack.s3.amazonaws.com/uploads/mini_thumb_Prone_scap_sets_with_90_degrees_abduction_4.jpg" >
         </td>
 
     <td colspan="3">
